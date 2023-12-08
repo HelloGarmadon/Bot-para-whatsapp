@@ -1,6 +1,7 @@
 const { create } = require("@open-wa/wa-automate");
-const { Client } = require("undici-types");
-const { cli } = require("winston/lib/winston/config");
+
+const handleIMageToSticker = require("./handles/handleImageToSticker");
+
 const App = async client => {
   await client.onAnyMessage(async message => {
     if (message.text.includes("!figurinhas")) {
